@@ -1,0 +1,171 @@
+Started by user Arava Venkata Jyothi
+Running as SYSTEM
+Building in workspace C:\ProgramData\Jenkins\.jenkins\workspace\PetStore_Postman_OrderDataDrivenTests_Collection
+[PetStore_Postman_OrderDataDrivenTests_Collection] $ cmd /c call C:\Windows\TEMP\jenkins11867422764775592900.bat
+
+C:\ProgramData\Jenkins\.jenkins\workspace\PetStore_Postman_OrderDataDrivenTests_Collection>"C:\Users\user\AppData\Roaming\npm\newman.cmd" run "E:\Postman\PetstoreProject\PetStoreAPI_Tests.postman_collection.json" --folder  "OrderDataDriven"  --iteration-data "E:\Postman\PetstoreProject\DataFiles\Store.json" 
+newman
+
+PetStoreAPI_Tests
+
+Iteration 1/10
+
+□ DataDriven / OrderDataDriven
+└ TC32_PlaceOrderPet Copy
+  ┌
+  │ 'Using "postman.setNextRequest" is deprecated. Use "pm
+  │ .execution.setNextRequest()" instead.'
+  └
+  POST https://petstore.swagger.io/v2/store/order [200 OK, 373B, 3.2s]
+  ┌
+  │ 'StoreID created: 1'
+  └
+  √  StoreID is captured successfully
+  √  Status code is 200 or 201
+
+Iteration 2/10
+
+└ TC32_PlaceOrderPet Copy
+  ┌
+  │ 'Using "postman.setNextRequest" is deprecated. Use "pm
+  │ .execution.setNextRequest()" instead.'
+  └
+  POST https://petstore.swagger.io/v2/store/order [200 OK, 374B, 403ms]
+  ┌
+  │ 'StoreID created: 2'
+  └
+  √  StoreID is captured successfully
+  √  Status code is 200 or 201
+
+Iteration 3/10
+
+└ TC32_PlaceOrderPet Copy
+  ┌
+  │ 'Using "postman.setNextRequest" is deprecated. Use "pm
+  │ .execution.setNextRequest()" instead.'
+  └
+  POST https://petstore.swagger.io/v2/store/order [200 OK, 373B, 396ms]
+  ┌
+  │ 'StoreID created: 3'
+  └
+  √  StoreID is captured successfully
+  √  Status code is 200 or 201
+
+Iteration 4/10
+
+└ TC32_PlaceOrderPet Copy
+  ┌
+  │ 'Using "postman.setNextRequest" is deprecated. Use "pm
+  │ .execution.setNextRequest()" instead.'
+  └
+  POST https://petstore.swagger.io/v2/store/order [200 OK, 374B, 330ms]
+  ┌
+  │ 'StoreID created: 4'
+  └
+  √  StoreID is captured successfully
+  √  Status code is 200 or 201
+
+Iteration 5/10
+
+└ TC32_PlaceOrderPet Copy
+  ┌
+  │ 'Using "postman.setNextRequest" is deprecated. Use "pm
+  │ .execution.setNextRequest()" instead.'
+  └
+  POST https://petstore.swagger.io/v2/store/order [200 OK, 373B, 329ms]
+  ┌
+  │ 'StoreID created: 5'
+  └
+  √  StoreID is captured successfully
+  √  Status code is 200 or 201
+
+Iteration 6/10
+
+└ TC32_PlaceOrderPet Copy
+  ┌
+  │ 'Using "postman.setNextRequest" is deprecated. Use "pm
+  │ .execution.setNextRequest()" instead.'
+  └
+  POST https://petstore.swagger.io/v2/store/order [200 OK, 374B, 420ms]
+  ┌
+  │ 'StoreID created: 6'
+  └
+  √  StoreID is captured successfully
+  √  Status code is 200 or 201
+
+Iteration 7/10
+
+└ TC32_PlaceOrderPet Copy
+  ┌
+  │ 'Using "postman.setNextRequest" is deprecated. Use "pm
+  │ .execution.setNextRequest()" instead.'
+  └
+  POST https://petstore.swagger.io/v2/store/order [200 OK, 373B, 363ms]
+  ┌
+  │ 'StoreID created: 7'
+  └
+  √  StoreID is captured successfully
+  √  Status code is 200 or 201
+
+Iteration 8/10
+
+└ TC32_PlaceOrderPet Copy
+  ┌
+  │ 'Using "postman.setNextRequest" is deprecated. Use "pm
+  │ .execution.setNextRequest()" instead.'
+  └
+  POST https://petstore.swagger.io/v2/store/order [200 OK, 374B, 386ms]
+  ┌
+  │ 'StoreID created: 8'
+  └
+  √  StoreID is captured successfully
+  √  Status code is 200 or 201
+
+Iteration 9/10
+
+└ TC32_PlaceOrderPet Copy
+  ┌
+  │ 'Using "postman.setNextRequest" is deprecated. Use "pm
+  │ .execution.setNextRequest()" instead.'
+  └
+  POST https://petstore.swagger.io/v2/store/order [200 OK, 373B, 486ms]
+  ┌
+  │ 'StoreID created: 9'
+  └
+  √  StoreID is captured successfully
+  √  Status code is 200 or 201
+
+Iteration 10/10
+
+└ TC32_PlaceOrderPet Copy
+  ┌
+  │ 'Using "postman.setNextRequest" is deprecated. Use "pm
+  │ .execution.setNextRequest()" instead.'
+  └
+  POST https://petstore.swagger.io/v2/store/order [200 OK, 376B, 433ms]
+  ┌
+  │ 'StoreID created: 10'
+  └
+  √  StoreID is captured successfully
+  √  Status code is 200 or 201
+
+┌─────────────────────────┬────────────────────┬────────────────────┐
+│                         │           executed │             failed │
+├─────────────────────────┼────────────────────┼────────────────────┤
+│              iterations │                 10 │                  0 │
+├─────────────────────────┼────────────────────┼────────────────────┤
+│                requests │                 10 │                  0 │
+├─────────────────────────┼────────────────────┼────────────────────┤
+│            test-scripts │                 30 │                  0 │
+├─────────────────────────┼────────────────────┼────────────────────┤
+│      prerequest-scripts │                 30 │                  0 │
+├─────────────────────────┼────────────────────┼────────────────────┤
+│              assertions │                 20 │                  0 │
+├─────────────────────────┴────────────────────┴────────────────────┤
+│ total run duration: 7.5s                                          │
+├───────────────────────────────────────────────────────────────────┤
+│ total data received: 477B (approx)                                │
+├───────────────────────────────────────────────────────────────────┤
+│ average response time: 675ms [min: 329ms, max: 3.2s, s.d.: 845ms] │
+└───────────────────────────────────────────────────────────────────┘
+Finished: SUCCESS

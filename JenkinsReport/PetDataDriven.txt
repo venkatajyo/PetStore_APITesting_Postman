@@ -1,0 +1,211 @@
+Started by user Arava Venkata Jyothi
+Running as SYSTEM
+Building in workspace C:\ProgramData\Jenkins\.jenkins\workspace\PetStore_Postman_PetDataDrivenTests_Collection
+[PetStore_Postman_PetDataDrivenTests_Collection] $ cmd /c call C:\Windows\TEMP\jenkins6891362926539732611.bat
+
+C:\ProgramData\Jenkins\.jenkins\workspace\PetStore_Postman_PetDataDrivenTests_Collection>"C:\Users\user\AppData\Roaming\npm\newman.cmd" run "E:\Postman\PetstoreProject\PetStoreAPI_Tests.postman_collection.json" --folder  "Pet_DataDriven"  --iteration-data "E:\Postman\PetstoreProject\DataFiles\PetStore.json" 
+newman
+
+PetStoreAPI_Tests
+
+Iteration 1/10
+
+□ DataDriven / Pet_DataDriven
+└ TC18_CreatePet
+  POST https://petstore.swagger.io/v2/pet [200 OK, 361B, 2.4s]
+  ┌
+  │ 'PETID created: 101'
+  └
+  √  PETID is captured successfully
+  √  Status code is 200 or 201
+
+└ TC19_pet_petId
+  GET https://petstore.swagger.io/v2/pet/101 [200 OK, 361B, 304ms]
+  √  Status code is 200
+
+└ TC20_DeletePetByPetId
+  DELETE https://petstore.swagger.io/v2/pet/101 [200 OK, 371B, 397ms]
+  √  Status code is 200
+
+Iteration 2/10
+
+└ TC18_CreatePet
+  POST https://petstore.swagger.io/v2/pet [200 OK, 361B, 286ms]
+  ┌
+  │ 'PETID created: 102'
+  └
+  √  PETID is captured successfully
+  √  Status code is 200 or 201
+
+└ TC19_pet_petId
+  GET https://petstore.swagger.io/v2/pet/102 [200 OK, 361B, 318ms]
+  √  Status code is 200
+
+└ TC20_DeletePetByPetId
+  DELETE https://petstore.swagger.io/v2/pet/102 [200 OK, 371B, 307ms]
+  √  Status code is 200
+
+Iteration 3/10
+
+└ TC18_CreatePet
+  POST https://petstore.swagger.io/v2/pet [200 OK, 361B, 365ms]
+  ┌
+  │ 'PETID created: 103'
+  └
+  √  PETID is captured successfully
+  √  Status code is 200 or 201
+
+└ TC19_pet_petId
+  GET https://petstore.swagger.io/v2/pet/103 [200 OK, 361B, 581ms]
+  √  Status code is 200
+
+└ TC20_DeletePetByPetId
+  DELETE https://petstore.swagger.io/v2/pet/103 [200 OK, 371B, 550ms]
+  √  Status code is 200
+
+Iteration 4/10
+
+└ TC18_CreatePet
+  POST https://petstore.swagger.io/v2/pet [200 OK, 361B, 564ms]
+  ┌
+  │ 'PETID created: 104'
+  └
+  √  PETID is captured successfully
+  √  Status code is 200 or 201
+
+└ TC19_pet_petId
+  GET https://petstore.swagger.io/v2/pet/104 [200 OK, 361B, 562ms]
+  √  Status code is 200
+
+└ TC20_DeletePetByPetId
+  DELETE https://petstore.swagger.io/v2/pet/104 [200 OK, 371B, 297ms]
+  √  Status code is 200
+
+Iteration 5/10
+
+└ TC18_CreatePet
+  POST https://petstore.swagger.io/v2/pet [200 OK, 361B, 510ms]
+  ┌
+  │ 'PETID created: 105'
+  └
+  √  PETID is captured successfully
+  √  Status code is 200 or 201
+
+└ TC19_pet_petId
+  GET https://petstore.swagger.io/v2/pet/105 [200 OK, 361B, 300ms]
+  √  Status code is 200
+
+└ TC20_DeletePetByPetId
+  DELETE https://petstore.swagger.io/v2/pet/105 [200 OK, 371B, 452ms]
+  √  Status code is 200
+
+Iteration 6/10
+
+└ TC18_CreatePet
+  POST https://petstore.swagger.io/v2/pet [200 OK, 361B, 326ms]
+  ┌
+  │ 'PETID created: 106'
+  └
+  √  PETID is captured successfully
+  √  Status code is 200 or 201
+
+└ TC19_pet_petId
+  GET https://petstore.swagger.io/v2/pet/106 [200 OK, 361B, 478ms]
+  √  Status code is 200
+
+└ TC20_DeletePetByPetId
+  DELETE https://petstore.swagger.io/v2/pet/106 [200 OK, 371B, 569ms]
+  √  Status code is 200
+
+Iteration 7/10
+
+└ TC18_CreatePet
+  POST https://petstore.swagger.io/v2/pet [200 OK, 361B, 558ms]
+  ┌
+  │ 'PETID created: 107'
+  └
+  √  PETID is captured successfully
+  √  Status code is 200 or 201
+
+└ TC19_pet_petId
+  GET https://petstore.swagger.io/v2/pet/107 [200 OK, 361B, 306ms]
+  √  Status code is 200
+
+└ TC20_DeletePetByPetId
+  DELETE https://petstore.swagger.io/v2/pet/107 [200 OK, 371B, 353ms]
+  √  Status code is 200
+
+Iteration 8/10
+
+└ TC18_CreatePet
+  POST https://petstore.swagger.io/v2/pet [200 OK, 361B, 289ms]
+  ┌
+  │ 'PETID created: 108'
+  └
+  √  PETID is captured successfully
+  √  Status code is 200 or 201
+
+└ TC19_pet_petId
+  GET https://petstore.swagger.io/v2/pet/108 [200 OK, 361B, 300ms]
+  √  Status code is 200
+
+└ TC20_DeletePetByPetId
+  DELETE https://petstore.swagger.io/v2/pet/108 [200 OK, 371B, 380ms]
+  √  Status code is 200
+
+Iteration 9/10
+
+└ TC18_CreatePet
+  POST https://petstore.swagger.io/v2/pet [200 OK, 361B, 315ms]
+  ┌
+  │ 'PETID created: 109'
+  └
+  √  PETID is captured successfully
+  √  Status code is 200 or 201
+
+└ TC19_pet_petId
+  GET https://petstore.swagger.io/v2/pet/109 [200 OK, 361B, 316ms]
+  √  Status code is 200
+
+└ TC20_DeletePetByPetId
+  DELETE https://petstore.swagger.io/v2/pet/109 [200 OK, 371B, 415ms]
+  √  Status code is 200
+
+Iteration 10/10
+
+└ TC18_CreatePet
+  POST https://petstore.swagger.io/v2/pet [200 OK, 361B, 568ms]
+  ┌
+  │ 'PETID created: 110'
+  └
+  √  PETID is captured successfully
+  √  Status code is 200 or 201
+
+└ TC19_pet_petId
+  GET https://petstore.swagger.io/v2/pet/110 [200 OK, 361B, 561ms]
+  √  Status code is 200
+
+└ TC20_DeletePetByPetId
+  DELETE https://petstore.swagger.io/v2/pet/110 [200 OK, 371B, 551ms]
+  √  Status code is 200
+
+┌─────────────────────────┬────────────────────┬────────────────────┐
+│                         │           executed │             failed │
+├─────────────────────────┼────────────────────┼────────────────────┤
+│              iterations │                 10 │                  0 │
+├─────────────────────────┼────────────────────┼────────────────────┤
+│                requests │                 30 │                  0 │
+├─────────────────────────┼────────────────────┼────────────────────┤
+│            test-scripts │                 90 │                  0 │
+├─────────────────────────┼────────────────────┼────────────────────┤
+│      prerequest-scripts │                 90 │                  0 │
+├─────────────────────────┼────────────────────┼────────────────────┤
+│              assertions │                 40 │                  0 │
+├─────────────────────────┴────────────────────┴────────────────────┤
+│ total run duration: 16.8s                                         │
+├───────────────────────────────────────────────────────────────────┤
+│ total data received: 1.15kB (approx)                              │
+├───────────────────────────────────────────────────────────────────┤
+│ average response time: 482ms [min: 286ms, max: 2.4s, s.d.: 373ms] │
+└───────────────────────────────────────────────────────────────────┘
+Finished: SUCCESS

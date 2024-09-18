@@ -1,0 +1,151 @@
+Started by user Arava Venkata Jyothi
+Running as SYSTEM
+Building in workspace C:\ProgramData\Jenkins\.jenkins\workspace\PetStore_Postman_UserDataDrivenTests_Collection
+[PetStore_Postman_UserDataDrivenTests_Collection] $ cmd /c call C:\Windows\TEMP\jenkins10896692665152009767.bat
+
+C:\ProgramData\Jenkins\.jenkins\workspace\PetStore_Postman_UserDataDrivenTests_Collection>"C:\Users\user\AppData\Roaming\npm\newman.cmd" run "E:\Postman\PetstoreProject\PetStoreAPI_Tests.postman_collection.json" --folder  "UserDataDriven"  --iteration-data "E:\Postman\PetstoreProject\DataFiles\User.json" 
+newman
+
+PetStoreAPI_Tests
+
+Iteration 1/10
+
+□ DataDriven / UserDataDriven
+└ TC46_CreateNewUser Copy
+  ┌
+  │ 'Using "postman.setNextRequest" is deprecated. Use "pm
+  │ .execution.setNextRequest()" instead.'
+  │ 'userId set to:', '{{id}}'
+  │ 'username set to:', '{{username}}'
+  └
+  POST https://petstore.swagger.io/v2/user [200 OK, 369B, 2s]
+  √  Status code is 200 or 201
+
+Iteration 2/10
+
+└ TC46_CreateNewUser Copy
+  ┌
+  │ 'Using "postman.setNextRequest" is deprecated. Use "pm
+  │ .execution.setNextRequest()" instead.'
+  │ 'userId set to:', '{{id}}'
+  │ 'username set to:', '{{username}}'
+  └
+  POST https://petstore.swagger.io/v2/user [200 OK, 369B, 358ms]
+  √  Status code is 200 or 201
+
+Iteration 3/10
+
+└ TC46_CreateNewUser Copy
+  ┌
+  │ 'Using "postman.setNextRequest" is deprecated. Use "pm
+  │ .execution.setNextRequest()" instead.'
+  │ 'userId set to:', '{{id}}'
+  │ 'username set to:', '{{username}}'
+  └
+  POST https://petstore.swagger.io/v2/user [200 OK, 369B, 580ms]
+  √  Status code is 200 or 201
+
+Iteration 4/10
+
+└ TC46_CreateNewUser Copy
+  ┌
+  │ 'Using "postman.setNextRequest" is deprecated. Use "pm
+  │ .execution.setNextRequest()" instead.'
+  │ 'userId set to:', '{{id}}'
+  │ 'username set to:', '{{username}}'
+  └
+  POST https://petstore.swagger.io/v2/user [200 OK, 369B, 271ms]
+  √  Status code is 200 or 201
+
+Iteration 5/10
+
+└ TC46_CreateNewUser Copy
+  ┌
+  │ 'Using "postman.setNextRequest" is deprecated. Use "pm
+  │ .execution.setNextRequest()" instead.'
+  │ 'userId set to:', '{{id}}'
+  │ 'username set to:', '{{username}}'
+  └
+  POST https://petstore.swagger.io/v2/user [200 OK, 369B, 295ms]
+  √  Status code is 200 or 201
+
+Iteration 6/10
+
+└ TC46_CreateNewUser Copy
+  ┌
+  │ 'Using "postman.setNextRequest" is deprecated. Use "pm
+  │ .execution.setNextRequest()" instead.'
+  │ 'userId set to:', '{{id}}'
+  │ 'username set to:', '{{username}}'
+  └
+  POST https://petstore.swagger.io/v2/user [200 OK, 369B, 291ms]
+  √  Status code is 200 or 201
+
+Iteration 7/10
+
+└ TC46_CreateNewUser Copy
+  ┌
+  │ 'Using "postman.setNextRequest" is deprecated. Use "pm
+  │ .execution.setNextRequest()" instead.'
+  │ 'userId set to:', '{{id}}'
+  │ 'username set to:', '{{username}}'
+  └
+  POST https://petstore.swagger.io/v2/user [200 OK, 369B, 450ms]
+  √  Status code is 200 or 201
+
+Iteration 8/10
+
+└ TC46_CreateNewUser Copy
+  ┌
+  │ 'Using "postman.setNextRequest" is deprecated. Use "pm
+  │ .execution.setNextRequest()" instead.'
+  │ 'userId set to:', '{{id}}'
+  │ 'username set to:', '{{username}}'
+  └
+  POST https://petstore.swagger.io/v2/user [200 OK, 369B, 557ms]
+  √  Status code is 200 or 201
+
+Iteration 9/10
+
+└ TC46_CreateNewUser Copy
+  ┌
+  │ 'Using "postman.setNextRequest" is deprecated. Use "pm
+  │ .execution.setNextRequest()" instead.'
+  │ 'userId set to:', '{{id}}'
+  │ 'username set to:', '{{username}}'
+  └
+  POST https://petstore.swagger.io/v2/user [200 OK, 369B, 581ms]
+  √  Status code is 200 or 201
+
+Iteration 10/10
+
+└ TC46_CreateNewUser Copy
+  ┌
+  │ 'Using "postman.setNextRequest" is deprecated. Use "pm
+  │ .execution.setNextRequest()" instead.'
+  │ 'userId set to:', '{{id}}'
+  │ 'username set to:', '{{username}}'
+  └
+  POST https://petstore.swagger.io/v2/user [200 OK, 370B, 377ms]
+  √  Status code is 200 or 201
+
+┌─────────────────────────┬───────────────────┬───────────────────┐
+│                         │          executed │            failed │
+├─────────────────────────┼───────────────────┼───────────────────┤
+│              iterations │                10 │                 0 │
+├─────────────────────────┼───────────────────┼───────────────────┤
+│                requests │                10 │                 0 │
+├─────────────────────────┼───────────────────┼───────────────────┤
+│            test-scripts │                30 │                 0 │
+├─────────────────────────┼───────────────────┼───────────────────┤
+│      prerequest-scripts │                30 │                 0 │
+├─────────────────────────┼───────────────────┼───────────────────┤
+│              assertions │                10 │                 0 │
+├─────────────────────────┴───────────────────┴───────────────────┤
+│ total run duration: 6.6s                                        │
+├─────────────────────────────────────────────────────────────────┤
+│ total data received: 431B (approx)                              │
+├─────────────────────────────────────────────────────────────────┤
+│ average response time: 583ms [min: 271ms, max: 2s, s.d.: 510ms] │
+└─────────────────────────────────────────────────────────────────┘
+Finished: SUCCESS

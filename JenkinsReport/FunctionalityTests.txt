@@ -1,0 +1,392 @@
+Started by user Arava Venkata Jyothi
+Running as SYSTEM
+Building in workspace C:\ProgramData\Jenkins\.jenkins\workspace\PetStore_Postman_FunctionalityTests_Collection
+[PetStore_Postman_FunctionalityTests_Collection] $ cmd /c call C:\Windows\TEMP\jenkins4288265038539082718.bat
+
+C:\ProgramData\Jenkins\.jenkins\workspace\PetStore_Postman_FunctionalityTests_Collection>"C:\Users\user\AppData\Roaming\npm\newman.cmd" run "E:\Postman\PetstoreProject\PetStoreAPI_Tests.postman_collection.json" --folder "FunctionalityTests"   
+newman
+
+PetStoreAPI_Tests
+
+□ FunctionalityTests / Pets / GETPets / findByStatus
+└ TC1_findByStatusAvailable
+  GET https://petstore.swagger.io/v2/pet/findByStatus?status=available [200 OK, 103.74kB, 4.5s]
+  √  Status code is 200
+  √  Content-Type is application/json
+  √  Response body is an array
+  √  Each pet status is 'available'
+  √  Response time is less than 100000ms
+  √  Large dataset returns and performance is acceptable
+  √  Pet status is not 'pending' or 'sold'
+
+└ TC2_findByStatusPending
+  GET https://petstore.swagger.io/v2/pet/findByStatus?status=pending [200 OK, 608B, 848ms]
+  √  Status code is 200
+  √  Content-Type is application/json
+  √  Response body is an array
+  √  Each pet status is 'pending'
+  √  Response time is less than 10000ms
+  √  Large dataset returns and performance is acceptable
+  √  Pet status is not 'pending' or 'sold'
+
+└ TC3_findByStatusSold
+  GET https://petstore.swagger.io/v2/pet/findByStatus?status=sold [200 OK, 3.5kB, 653ms]
+  √  Status code is 200
+  √  Content-Type is application/json
+  √  Response body is an array
+  √  Each pet status is 'Sold'
+  √  Response time is less than 4000ms
+  √  Large dataset returns and performance is acceptable
+  √  Pet status is not 'pending' or 'sold'
+
+└ TC4_findByStatusPendingAndSold
+  GET https://petstore.swagger.io/v2/pet/findByStatus?status=pending&status=sold [200 OK, 608B, 272ms]
+  √  Pets should be either 'pending' or 'sold'
+  √  Status code is 200
+  √  Content-Type is application/json
+  √  Response time is less than 4000ms
+
+└ TC5_findByStatusInvalid
+  GET https://petstore.swagger.io/v2/pet/findByStatus?Status=invalid [200 OK, 328B, 289ms]
+  √  Expected failure: Status is invalid
+  √  Status is invalid
+
+└ TC6_findByStatusEmpty
+  GET https://petstore.swagger.io/v2/pet/findByStatus?Status=" " [200 OK, 328B, 377ms]
+  √  Expected failure: Status is invalid
+  √  Status is invalid
+
+└ TC7_findByStatusAvailableAndPending
+  GET https://petstore.swagger.io/v2/pet/findByStatus?status=available&status=pending [200 OK, 104.04kB, 1797ms]
+  √  Response status code is 200
+
+□ FunctionalityTests / Pets / GETPets / findByPetID
+└ TC8_pet_petId
+  GET https://petstore.swagger.io/v2/pet/9223372036854747521 [200 OK, 421B, 1104ms]
+  √  Content-Type is application/json
+  √  Pet ID is an integer
+  √  Pet name is present
+  √  Pet status is available
+  √  Response time is less than 10000ms
+  √  Expected failure: Status is invalid
+
+└ TC9_pet_invalid_petId
+  GET https://petstore.swagger.io/v2/pet/11223547 [404 Not Found, 384B, 790ms]
+  √  Response status code is 404
+  √  Response time is less than 3000ms
+  √  Response has Content-Type header of application/json
+
+□ FunctionalityTests / Pets / CreatePets
+└ TC10_CreatePet
+  ┌
+  │ 'Generated PetID: 139178962740'
+  └
+  POST https://petstore.swagger.io/v2/pet [200 OK, 391B, 751ms]
+  √  PetID is generated, set, and is a valid number
+  ┌
+  │ 'PetID after request: 139178962740'
+  │ 'Request body:', {
+  │   id: 139178962740,
+  │   name: 'Example Pet'
+  │ }
+  │ 'Response PetID is being set as:', 139178962740
+  └
+  √  Response contains a valid PetID
+
+└ TC11_CreatePet_invalidDetails
+  POST https://petstore.swagger.io/v2/pet [400 Bad Request, 386B, 832ms]
+  √  Status code is 400
+  √  Content-Type is application/json
+  √  Response contains 'code'
+  √  Response 'code' is 400
+  √  Response contains 'type'
+  √  Response 'type' is 'unknown'
+  √  Response contains 'message'
+  √  Response 'message' is 'bad input'
+  √  Response time is less than 1000ms
+
+└ TC12_CreatePetEmptyDetails
+  POST https://petstore.swagger.io/v2/pet [400 Bad Request, 386B, 823ms]
+  √  Status code is 400
+  √  Content-Type is application/json
+  √  Response contains 'code'
+  √  Response 'code' is 400
+  √  Response contains 'type'
+  √  Response 'type' is 'unknown'
+  √  Response contains 'message'
+  √  Response 'message' is 'bad input'
+  √  Response time is less than 3000ms
+
+□ FunctionalityTests / Pets / UpdatePets
+└ TC13_UpdatePet
+  ┌
+  │ 'Generated Random Name: IkxIFLut'
+  └
+  PUT https://petstore.swagger.io/v2/pet [200 OK, 472B, 825ms]
+  √  Status code is 200
+  √  Content-Type is application/json
+  √  Response contains 'id'
+  √  Response 'id' is a number
+  √  Response contains 'category'
+  √  Response 'category' has 'id' and 'name'
+  √  Response contains 'name'
+  √  Response 'name' is 'doggie2'
+  √  Response 'photoUrls' is an array
+  √  Response contains 'tags'
+  √  Response 'tags' is an array
+  √  First tag has 'id' and 'name'
+  √  Response contains 'status'
+  √  Response 'status' is 'available'
+  √  Response time is less than 3000ms
+  ┌
+  │ 'RandomName variable unset.'
+  └
+
+□ FunctionalityTests / Pets / DeletePets
+└ TC14_DeletePetByPetId
+  DELETE https://petstore.swagger.io/v2/pet/139178962740 [200 OK, 380B, 571ms]
+  √  Status code is 200
+  √  Content-Type is application/json
+  √  Response contains 'code'
+  √  Response contains 'type'
+  √  Response 'type' is 'unknown'
+  √  Response contains 'message'
+  √  Response time is less than 10000ms
+
+□ FunctionalityTests / Pets / Pet_Chaining
+└ TC15_CreatePet
+  ┌
+  │ 'Generated PetID: 1110951297292'
+  └
+  POST https://petstore.swagger.io/v2/pet [200 OK, 392B, 589ms]
+  √  PetID is generated, set, and is a valid number
+  ┌
+  │ 'PetID after request: 1110951297292'
+  │ 'Request body:', {
+  │   id: 1110951297292,
+  │   name: 'Example Pet'
+  │ }
+  │ 'Response PetID is being set as:', 1110951297292
+  └
+  √  Response contains a valid PetID
+
+└ TC16_pet_petId
+  GET https://petstore.swagger.io/v2/pet/1110951297292 [200 OK, 392B, 304ms]
+  √  Status code is 200
+  √  Content-Type is application/json
+  √  Pet ID is an integer
+  √  Pet name is present
+  √  Response time is less than 4000ms
+
+└ TC17_DeletePetByPetId
+  DELETE https://petstore.swagger.io/v2/pet/1110951297292 [200 OK, 381B, 284ms]
+  √  Status code is 200
+  √  Content-Type is application/json
+  √  Response contains 'code'
+  √  Response contains 'type'
+  √  Response 'type' is 'unknown'
+  √  Response contains 'message'
+  √  Response time is less than 3000ms
+
+□ FunctionalityTests / Store / GET_Order
+└ TC21_storeInventory
+  GET https://petstore.swagger.io/v2/store/inventory [200 OK, 461B, 306ms]
+  √  Response status code is 200
+  √  Response time is within acceptable range
+  √  Validate the response schema for required fields
+
+□ FunctionalityTests / Store / GetOrderByID
+└ TC22_PurchaseOrderByValidID
+  GET https://petstore.swagger.io/v2/store/order/2 [200 OK, 433B, 296ms]
+  √  Status code is either 200 or 404
+
+└ TC23_PurchaseOrderByInvalidID
+  GET https://petstore.swagger.io/v2/store/order/0 [404 Not Found, 386B, 291ms]
+  √  Response status code is 404
+  √  Response has the required fields - code, type, and message
+  √  Content-Type is application/json
+  √  Response time is less than 20000ms
+
+□ FunctionalityTests / Store / CreateOrder
+└ TC24_PlaceOrderPet
+  POST https://petstore.swagger.io/v2/store/order [200 OK, 394B, 326ms]
+  √  Response status code is 200
+  √  Response time is less than 2000ms
+  √  Response has the required fields
+  √  Complete is a boolean value
+
+└ TC25_PlaceOrderByInvalidID
+  POST https://petstore.swagger.io/v2/store/order [400 Bad Request, 386B, 382ms]
+  √  Response status code is 400
+  √  Response has the required fields - code, type, and message
+  √  Content-Type is application/json
+  √  Response time is within an acceptable range
+
+└ TC26_PlaceOrderByEmptyID
+  POST https://petstore.swagger.io/v2/store/order [400 Bad Request, 386B, 289ms]
+  √  Response status code is 400
+  √  Response has the required fields - code, type, and message
+  √  Content-Type is application/json
+  √  Response time is within an acceptable range
+
+□ FunctionalityTests / Store / DeleteOrder
+└ TC27_DeletePurchaseOrder
+  DELETE https://petstore.swagger.io/v2/store/order/0 [404 Not Found, 390B, 284ms]
+  √  Response time is less than 20000ms
+  √  Response has the required fields - code, type, and message
+  √  Code is a non-negative integer
+  √  Type and message are non-empty strings
+  √  Response status code is either 404 or 200
+
+└ TC28_DeletePurchaseOrderInvalidID
+  DELETE https://petstore.swagger.io/v2/store/order/1 [404 Not Found, 390B, 291ms]
+  √  Response time is less than 2000ms
+  √  Response has the required fields - code, type, and message
+  √  Code is a non-negative integer
+  √  Type and message are non-empty strings
+  √  Response status code is 200 or 404
+
+□ FunctionalityTests / Store / OrderChaining
+└ TC29_PlaceOrderPet
+  ┌
+  │ 'Generated Order ID: 191363'
+  │ 'Generated Pet ID: 5'
+  │ 'Generated Quantity: 1'
+  └
+  POST https://petstore.swagger.io/v2/store/order [200 OK, 396B, 306ms]
+  √  StoreID is generated and stored
+  ┌
+  │ 'Stored StoreID: 191363'
+  └
+  √  Status code is 200 or 201
+
+└ TC30_PurchaseOrderByID
+  GET https://petstore.swagger.io/v2/store/order/191363 [200 OK, 396B, 276ms]
+  √  Response status code is 200
+  √  Response content type is application/json
+  √  Response time is less than 2000ms
+  √  Validate the order object schema
+
+└ TC31_DeletePurchaseOrderByID
+  DELETE https://petstore.swagger.io/v2/store/order/191363 [200 OK, 374B, 354ms]
+  √  Response status code is 200
+  √  Response time is less than 2000ms
+  √  Response has the required fields - code, type, and message
+  √  Code is a non-negative integer
+  √  Type and message are non-empty strings
+
+□ FunctionalityTests / User / CreateNewUser
+└ TC35_CreateNewUser
+  ┌
+  │ 'Generated User Details: ', {
+  │   generatedId: 14602,
+  │   generatedUsername: 'User_965',
+  │   generatedFirstName: 'John',
+  │   generatedPassword: 'Pass_abpczw4f',
+  │   generatedEmail: 'user_965@example.com'
+  │ }
+  └
+  POST https://petstore.swagger.io/v2/user [200 OK, 373B, 303ms]
+  √  Status code is 200 or 201
+
+└ TC36_CreateNewUserInvalid
+  POST https://petstore.swagger.io/v2/user [400 Bad Request, 386B, 287ms]
+  √  Response status code is 400
+  √  Response has the required fields - code, type, and message
+  √  Email is in a valid format
+  √  Response time is less than 4000ms
+
+□ FunctionalityTests / User / LoginUser
+└ TC37_LoginUser
+  GET https://petstore.swagger.io/v2/user/login?username=User_965&password=Pass_abpczw4f [200 OK, 471B, 342ms]
+  √  Response status code is 200
+  √  Response time is less than 2000ms
+  √  Content-Type header is application/json
+  √  Response schema contains code, type, and message fields
+
+□ FunctionalityTests / User / LogOutUser
+└ TC38_LogOutUser
+  GET https://petstore.swagger.io/v2/user/logout?username={{InvalidUsername}}&password={{InvalidPassword}} [200 OK, 370B, 328ms]
+  √  Response status code is 200
+  √  Response time is within an acceptable range
+  √  Response has the required fields - code, type, and message
+  √  Code is a non-negative integer
+  √  Type and message are non-empty strings
+
+□ FunctionalityTests / User / GET_ByUsername
+└ TC39_GET_Username
+  GET https://petstore.swagger.io/v2/user/User_965 [200 OK, 490B, 276ms]
+  √  Status code is 200
+
+└ TC40_GET_InvalidUsername
+  GET https://petstore.swagger.io/v2/user/fgfh [404 Not Found, 385B, 281ms]
+  √  Status code is 404
+
+□ FunctionalityTests / User / UpdateUser
+└ TC41_UpdateUser
+  ┌
+  │ 'Updating user with Username: User_965'
+  └
+  PUT https://petstore.swagger.io/v2/user/User_965 [200 OK, 373B, 305ms]
+  √  Status code is 200
+  √  Updated user matches the input data
+
+□ FunctionalityTests / User / DeleteUser
+└ TC42_DeleteUser
+  ┌
+  │ 'Deleting user with username: User_965'
+  └
+  DELETE https://petstore.swagger.io/v2/user/User_965 [200 OK, 376B, 273ms]
+  √  Status code is 200 or 204
+  ┌
+  │ 'User deleted and variables have been unset.'
+  └
+
+□ FunctionalityTests / User / User_Chaining
+└ TC43_CreateNewUser
+  ┌
+  │ 'Generated User Details: ', {
+  │   generatedId: 7354,
+  │   generatedUsername: 'User_141',
+  │   generatedFirstName: 'Jane',
+  │   generatedPassword: 'Pass_s2zc4i8d',
+  │   generatedEmail: 'user_141@example.com'
+  │ }
+  └
+  POST https://petstore.swagger.io/v2/user [200 OK, 372B, 287ms]
+  √  Status code is 200 or 201
+
+└ TC44_GET_Username
+  GET https://petstore.swagger.io/v2/user/User_141 [200 OK, 489B, 276ms]
+  √  Status code is 200
+
+└ TC45_DeleteUser
+  ┌
+  │ 'Deleting user with username: User_141'
+  └
+  DELETE https://petstore.swagger.io/v2/user/User_141 [200 OK, 376B, 312ms]
+  √  Status code is 200 or 204
+  ┌
+  │ 'User deleted and variables have been unset.'
+  └
+
+┌─────────────────────────┬────────────────────┬────────────────────┐
+│                         │           executed │             failed │
+├─────────────────────────┼────────────────────┼────────────────────┤
+│              iterations │                  1 │                  0 │
+├─────────────────────────┼────────────────────┼────────────────────┤
+│                requests │                 39 │                  0 │
+├─────────────────────────┼────────────────────┼────────────────────┤
+│            test-scripts │                117 │                  0 │
+├─────────────────────────┼────────────────────┼────────────────────┤
+│      prerequest-scripts │                117 │                  0 │
+├─────────────────────────┼────────────────────┼────────────────────┤
+│              assertions │                158 │                  0 │
+├─────────────────────────┴────────────────────┴────────────────────┤
+│ total run duration: 26.2s                                         │
+├───────────────────────────────────────────────────────────────────┤
+│ total data received: 213.12kB (approx)                            │
+├───────────────────────────────────────────────────────────────────┤
+│ average response time: 571ms [min: 272ms, max: 4.5s, s.d.: 710ms] │
+└───────────────────────────────────────────────────────────────────┘
+Finished: SUCCESS
